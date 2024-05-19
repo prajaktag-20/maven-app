@@ -86,7 +86,7 @@ resource "aws_instance" "test_ec2" {
   associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.test_sg.id,aws_security_group.ec2_sg_ssh_http.id]
   tags = {
-    Name = "Jenkins-EC2"
+    Name = "Target-Server"
   }
   user_data = <<EOF
 #!/bin/bash
